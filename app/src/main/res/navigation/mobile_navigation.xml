@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.aidrive.aidriveconcept.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_cam"
+        android:name="com.aidrive.aidriveconcept.ui.cam.CamFragment"
+        android:label="CAM"
+        tools:layout="@layout/fragment_cam" />
+
+    <fragment
+        android:id="@+id/navigation_alarm"
+        android:name="com.aidrive.aidriveconcept.ui.alarm.AlarmFragment"
+        android:label="ALARM"
+        tools:layout="@layout/fragment_alarm" />
+
+    <fragment
+        android:id="@+id/navigation_task"
+        android:name="com.aidrive.aidriveconcept.ui.task.TaskFragment"
+        android:label="TASK"
+        tools:layout="@layout/fragment_task" />
+
+    <fragment
+        android:id="@+id/navigation_diary"
+        android:name="com.aidrive.aidriveconcept.ui.diary.DiaryFragment"
+        android:label="DIARY"
+        tools:layout="@layout/fragment_task" />
+</navigation>

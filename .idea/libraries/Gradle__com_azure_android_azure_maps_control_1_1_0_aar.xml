@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.azure.android:azure-maps-control:1.1.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4b778f1db9453b38c5be87fddc8868dd/transformed/jetified-azure-maps-control-1.1.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4b778f1db9453b38c5be87fddc8868dd/transformed/jetified-azure-maps-control-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4b778f1db9453b38c5be87fddc8868dd/transformed/jetified-azure-maps-control-1.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4b778f1db9453b38c5be87fddc8868dd/transformed/jetified-azure-maps-control-1.1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

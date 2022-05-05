@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:columnCount="2"
+    android:weightSum="2"
+    >
+
+    <com.aidrive.aidriveconcept.GStreamerSurfaceView
+        android:id="@+id/surface_video0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:gravity="center"
+        android:layout_gravity="fill"
+        android:text="CAM0" />
+
+    <com.aidrive.aidriveconcept.GStreamerSurfaceView
+        android:id="@+id/surface_video1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:gravity="center"
+        android:layout_gravity="fill"
+        android:text="CAM1" />
+
+    <com.aidrive.aidriveconcept.GStreamerSurfaceView
+        android:id="@+id/surface_video2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:gravity="center"
+        android:layout_gravity="fill"
+        android:text="CAM2" />
+
+    <com.aidrive.aidriveconcept.GStreamerSurfaceView
+        android:id="@+id/surface_video3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:gravity="center"
+        android:layout_gravity="fill"
+        android:text="CAM3" />
+
+</GridLayout>
