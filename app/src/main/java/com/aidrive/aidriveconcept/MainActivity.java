@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.aidrive.aidriveconcept.ui.cam.CamFragment;
+import com.aidrive.aidriveconcept.ui.home.HomeFragment;
 import com.azure.android.maps.control.layer.BubbleLayer;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -64,7 +65,6 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         nativeClassInit();
     }
 
-
     private ActivityMainBinding binding;
 
     @Override
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_cam, R.id.navigation_alarm, R.id.navigation_task, R.id.navigation_diary).build();
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_cam,R.id.navigation_chat, R.id.navigation_alarm, R.id.navigation_task, R.id.navigation_diary).build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
@@ -138,11 +138,23 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     public void onFragmentCreated(String data) {
         Log.i("MainActivity", "sendDataToActivity: " + data);
-        if (data == "camFragment")
+        if (data.equals("camFragment"))
         {
             CamFragment cf = (CamFragment)getSupportFragmentManager().findFragmentById(R.id.navigation_cam);
-            sv0 = (SurfaceView) this.findViewById(R.id.surface_video0);
-            sv1 = (SurfaceView) this.findViewById(R.id.surface_video1);
+            sv0 = this.findViewById(R.id.surface_video0);
+            sv1 = this.findViewById(R.id.surface_video1);
+            if (sv0 != null) {
+                sh0 = sv0.getHolder();
+                sh0.addCallback(this);
+            }
+            if (sv1 != null) {
+                sh1 = sv1.getHolder();
+                sh1.addCallback(this);
+            }
+        }else if (data.equals("mapFragment")) {
+            HomeFragment cf = (HomeFragment)getSupportFragmentManager().findFragmentById(R.id.navigation_home);
+            sv0 = this.findViewById(R.id.surfaceView1);
+            sv1 = this.findViewById(R.id.surfaceView2);
             if (sv0 != null) {
                 sh0 = sv0.getHolder();
                 sh0.addCallback(this);

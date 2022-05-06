@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/navigation_task"
-        android:name="com.aidrive.aidriveconcept.ui.task.TaskFragment"
+        android:name="com.aidrive.aidriveconcept.ui.task.JobsFragment"
         android:label="TASK"
         tools:layout="@layout/fragment_task" />
 

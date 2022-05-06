@@ -21,6 +21,8 @@ import com.azure.android.maps.control.layer.SymbolLayer;
 import com.azure.android.maps.control.source.DataSource;
 import com.mapbox.geojson.Point;
 
+import java.util.TimerTask;
+
 public class HomeFragment extends Fragment {
 
     private MainActivity activity;
@@ -56,12 +58,12 @@ public class HomeFragment extends Fragment {
             map.layers.add(layer);
             //map.setCamera(center(Point.fromLngLat(33.8714, 151.1949)), zoom(14));
         });
+        activity.onFragmentCreated("mapFragment");
 
         return root;
     }
 
-    public void updateMapLocation()
-    {
+    public void updateMapLocation() {
         //Create a data source and add it to the map.
         DataSource source = new DataSource();
         //Import the geojson data and add it to the data source.
