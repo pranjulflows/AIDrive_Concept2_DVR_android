@@ -60,6 +60,18 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="chatsListFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="366" />
+                            <option name="y" value="593" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="navigation_alarm">
                     <value>
                       <LayoutPositions>

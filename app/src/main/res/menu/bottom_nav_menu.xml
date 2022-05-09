@@ -20,10 +20,10 @@
         android:icon="@drawable/ic_baseline_photo_camera_24"
         android:title="CAM" />
 
-    <item
-        android:id="@+id/navigation_alarm"
-        android:icon="@drawable/ic_baseline_alarm_on_24"
-        android:title="ALARM" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_alarm"-->
+<!--        android:icon="@drawable/ic_baseline_alarm_on_24"-->
+<!--        android:title="ALARM" />-->
 
 
     <item

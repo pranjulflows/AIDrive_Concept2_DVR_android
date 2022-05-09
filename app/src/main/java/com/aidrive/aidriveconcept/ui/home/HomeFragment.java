@@ -59,7 +59,6 @@ public class HomeFragment extends Fragment {
             //map.setCamera(center(Point.fromLngLat(33.8714, 151.1949)), zoom(14));
         });
         activity.onFragmentCreated("mapFragment");
-
         return root;
     }
 
@@ -92,7 +91,7 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
         mapControl.onStart();
     }

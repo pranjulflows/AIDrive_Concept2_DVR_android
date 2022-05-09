@@ -7,6 +7,9 @@ pluginManagement {
         mavenCentral()
         jcenter()
         maven {url "https://atlas.microsoft.com/sdk/android"}
+        maven {
+            url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
+        }
     }
 }
 dependencyResolutionManagement {
@@ -17,7 +20,13 @@ dependencyResolutionManagement {
         mavenCentral()
         jcenter()
         maven {url "https://atlas.microsoft.com/sdk/android"}
+        maven {
+            url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
+        }
     }
 }
 rootProject.name = "AIDrive Concept2"
 include ':app'
+include ':mqttClient'
+include ':callbacks'
+

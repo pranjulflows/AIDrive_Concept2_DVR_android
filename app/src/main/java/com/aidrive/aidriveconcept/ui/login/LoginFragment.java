@@ -2,6 +2,7 @@ package com.aidrive.aidriveconcept.ui.login;
 
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.aidrive.aidriveconcept.MainActivity;
 import com.aidrive.aidriveconcept.R;
 import com.aidrive.aidriveconcept.databinding.LoginFragmentBinding;
 import com.aidrive.aidriveconcept.databinding.OptionsFragmentBinding;
@@ -24,17 +26,21 @@ public class LoginFragment extends Fragment {
     public static LoginFragment newInstance() {
         return new LoginFragment();
     }
+
     private LoginFragmentBinding binding;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         binding = LoginFragmentBinding.inflate(inflater, container, false);
-        return binding.getRoot();    }
+        return binding.getRoot();
+    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding.optionsBtn.setOnClickListener(view1 -> Navigation.findNavController(view1).navigate(R.id.optionsFragment));
+        binding.loginBtn.setOnClickListener(view1 -> startActivity(new Intent(requireActivity(), MainActivity.class)));
     }
 
     @Override

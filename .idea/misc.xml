@@ -12,8 +12,11 @@
         <entry key="..\:/Users/Pranjul/StudioProjects/DVR-UI-Test/app/src/main/res/layout/side_buttons.xml" value="0.22" />
         <entry key="..\:/Users/Pranjul/StudioProjects/DVR-UI-Test/app/src/main/res/menu/bottom_nav_menu.xml" value="0.262890625" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/drawable/btn_border.xml" value="0.2645" />
+        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/drawable/chat_head.xml" value="0.2695" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/drawable/edittext_border.xml" value="0.2645" />
-        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-land/chats_fragment.xml" value="0.4864583333333333" />
+        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-land/chat_fragment.xml" value="0.18" />
+        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-land/chat_list_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-land/chats_fragment.xml" value="0.25" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-land/fragment_home.xml" value="0.14" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-land/fragment_task.xml" value="0.25" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-sw600dp/fragment_home.xml" value="0.13" />
@@ -21,6 +24,7 @@
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-sw600dp/options_fragment.xml" value="0.16" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/activity_launcher.xml" value="0.17526041666666667" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/chat_fragment.xml" value="0.262890625" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/chats_fragment.xml" value="0.262890625" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/fragment_cam.xml" value="0.17526041666666667" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/fragment_home.xml" value="0.12" />
@@ -29,10 +33,13 @@
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/header_view_layout.xml" value="0.262890625" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/job_left_layout.xml" value="0.18" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/job_right_layout.xml" value="0.22" />
+        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/left_chat_layout.xml" value="0.262890625" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/list_item.xml" value="0.19236111111111112" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/login_fragment.xml" value="0.25" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/options_fragment.xml" value="0.262890625" />
+        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/right_chat_layout.xml" value="0.262890625" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/side_buttons.xml" value="0.17526041666666667" />
+        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/users_chat_list_item.xml" value="0.262890625" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/menu/bottom_nav_menu.xml" value="0.17526041666666667" />
       </map>
     </option>

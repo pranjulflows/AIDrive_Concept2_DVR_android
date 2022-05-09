@@ -34,4 +34,9 @@
         android:name="com.aidrive.aidriveconcept.ui.diary.DiaryFragment"
         android:label="DIARY"
         tools:layout="@layout/fragment_task" />
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.aidrive.aidriveconcept.ui.chats.ChatsListFragment"
+        android:label="chat_list_fragment"
+        tools:layout="@layout/chat_list_fragment" />
 </navigation>

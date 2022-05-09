@@ -1,42 +1,27 @@
 package com.aidrive.aidriveconcept;
 
-import static com.azure.android.maps.control.options.CameraOptions.center;
-import static com.azure.android.maps.control.options.CameraOptions.zoom;
-
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Toast;
 
-import com.aidrive.aidriveconcept.ui.cam.CamFragment;
-import com.aidrive.aidriveconcept.ui.home.HomeFragment;
-import com.azure.android.maps.control.layer.BubbleLayer;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
 import com.aidrive.aidriveconcept.databinding.ActivityMainBinding;
-
-// Gstreamer
-import org.freedesktop.gstreamer.GStreamer;
-import android.widget.Toast;
-
-
-// Azure Maps
-import com.azure.android.maps.control.AzureMaps;
-import com.azure.android.maps.control.MapControl;
-import com.azure.android.maps.control.layer.SymbolLayer;
-import com.azure.android.maps.control.options.MapStyle;
-import com.azure.android.maps.control.source.DataSource;
-import com.mapbox.geojson.Point;
-
 import com.aidrive.aidriveconcept.network.Utils;
+import com.aidrive.aidriveconcept.ui.cam.CamFragment;
+import com.aidrive.aidriveconcept.ui.home.HomeFragment;
+import com.azure.android.maps.control.source.DataSource;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import org.freedesktop.gstreamer.GStreamer;
 
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback  {
     private native String nativeGetGStreamerInfo();
@@ -81,7 +66,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_cam,R.id.navigation_chat, R.id.navigation_alarm, R.id.navigation_task, R.id.navigation_diary).build();
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_cam,R.id.navigation_chat,
+                /*R.id.navigation_alarm,*/ R.id.navigation_task, R.id.navigation_diary).build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
@@ -137,9 +123,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     }
 
     public void onFragmentCreated(String data) {
-        Log.i("MainActivity", "sendDataToActivity: " + data);
-        if (data.equals("camFragment"))
-        {
+        Log.i("MainActivity", "sendDataToActivity: Created " + data);
+        if (data.equals("camFragment")) {
             CamFragment cf = (CamFragment)getSupportFragmentManager().findFragmentById(R.id.navigation_cam);
             sv0 = this.findViewById(R.id.surface_video0);
             sv1 = this.findViewById(R.id.surface_video1);
@@ -176,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     }
 
     public void onFragmentDestroyed(String data) {
-        Log.i("MainActivity", "sendDataToActivity: " + data);
+        Log.i("MainActivity", "sendDataToActivity: Destroy" + data);
     }
 
     @Override

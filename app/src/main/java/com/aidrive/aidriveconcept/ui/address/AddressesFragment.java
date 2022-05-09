@@ -1,4 +1,4 @@
-package com.aidrive.aidriveconcept.ui.chats;
+package com.aidrive.aidriveconcept.ui.address;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -14,24 +14,24 @@ import android.view.ViewGroup;
 
 import com.aidrive.aidriveconcept.R;
 
-public class ChatsFragment extends Fragment {
+public class AddressesFragment extends Fragment {
 
-    private ChatsViewModel mViewModel;
+    private AddressesViewModel mViewModel;
 
-    public static ChatsFragment newInstance() {
-        return new ChatsFragment();
+    public static AddressesFragment newInstance() {
+        return new AddressesFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.chats_fragment, container, false);
+        return inflater.inflate(R.layout.addresses_fragment, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(ChatsViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(AddressesViewModel.class);
         // TODO: Use the ViewModel
     }
 
