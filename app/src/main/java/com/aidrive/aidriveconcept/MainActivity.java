@@ -20,20 +20,34 @@ import com.aidrive.aidriveconcept.ui.cam.CamFragment;
 import com.aidrive.aidriveconcept.ui.home.HomeFragment;
 import com.azure.android.maps.control.source.DataSource;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.softradix.network.RetrofitClient;
 
 import org.freedesktop.gstreamer.GStreamer;
 
-public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback  {
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback {
     private native String nativeGetGStreamerInfo();
+
     private native void nativeInit();     // Initialize native code, build pipeline, etc
+
     private native void nativeFinalize(); // Destroy pipeline and shutdown native code
+
     private native void nativePlay();     // Set pipeline to PLAYING
+
     private native void nativePause();    // Set pipeline to PAUSED
+
     private static native boolean nativeClassInit(); // Initialize native class: cache Method IDs for callbacks
+
     private native void nativeSurfaceCam0Init(Object surface);
+
     private native void nativeSurfaceCam1Init(Object surface);
+
     private native void nativeSurfaceCam0Finalize();
+
     private native void nativeSurfaceCam1Finalize();
+
     private long native_custom_data;      // Native code will use this to keep private data
     private boolean is_playing_desired;   // Whether the user asked to go to PLAYING
 
@@ -59,15 +73,15 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         utils = new Utils();
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_cam,R.id.navigation_chat,
-                /*R.id.navigation_alarm,*/ R.id.navigation_task, R.id.navigation_diary).build();
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_chat,
+                /*R.id.navigation_alarm,*/ R.id.navigation_task, R.id.navigation_diary, R.id.navigation_settings).build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
@@ -86,27 +100,27 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
         if (savedInstanceState != null) {
             is_playing_desired = savedInstanceState.getBoolean("playing");
-            Log.i ("GStreamer", "Activity created. Saved state is playing:" + is_playing_desired);
+            Log.i("GStreamer", "Activity created. Saved state is playing:" + is_playing_desired);
         } else {
             is_playing_desired = false;
-            Log.i ("GStreamer", "Activity created. There is no saved state, playing: false");
+            Log.i("GStreamer", "Activity created. There is no saved state, playing: false");
         }
 
         // INIT Native C++
         is_playing_desired = true;
         nativeInit();
 
-        System.out.println("GST version: "+nativeGetGStreamerInfo());
-        System.out.println("IP: "+computer_ip);
+        System.out.println("GST version: " + nativeGetGStreamerInfo());
+        System.out.println("IP: " + computer_ip);
     }
 
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
         Log.d("GStreamer", "Surface changed to format " + format + " width " + width + " height " + height);
 
         if (holder == sh0)
-            nativeSurfaceCam0Init (holder.getSurface());
+            nativeSurfaceCam0Init(holder.getSurface());
         if (holder == sh1)
-            nativeSurfaceCam1Init (holder.getSurface());
+            nativeSurfaceCam1Init(holder.getSurface());
     }
 
     public void surfaceCreated(SurfaceHolder holder) {
@@ -117,15 +131,15 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         Log.d("GStreamer", "Surface destroyed");
 
         if (holder == sh0)
-            nativeSurfaceCam0Finalize ();
+            nativeSurfaceCam0Finalize();
         if (holder == sh1)
-            nativeSurfaceCam1Finalize ();
+            nativeSurfaceCam1Finalize();
     }
 
     public void onFragmentCreated(String data) {
         Log.i("MainActivity", "sendDataToActivity: Created " + data);
         if (data.equals("camFragment")) {
-            CamFragment cf = (CamFragment)getSupportFragmentManager().findFragmentById(R.id.navigation_cam);
+            CamFragment cf = (CamFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_cam);
             sv0 = this.findViewById(R.id.surface_video0);
             sv1 = this.findViewById(R.id.surface_video1);
             if (sv0 != null) {
@@ -136,10 +150,11 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                 sh1 = sv1.getHolder();
                 sh1.addCallback(this);
             }
-        }else if (data.equals("mapFragment")) {
-            HomeFragment cf = (HomeFragment)getSupportFragmentManager().findFragmentById(R.id.navigation_home);
+        } else if (data.equals("mapFragment")) {
+            HomeFragment cf = (HomeFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_home);
             sv0 = this.findViewById(R.id.surfaceView1);
             sv1 = this.findViewById(R.id.surfaceView2);
+
             if (sv0 != null) {
                 sh0 = sv0.getHolder();
                 sh0.addCallback(this);
@@ -151,8 +166,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         }
     }
 
-    public void updateMapLocation()
-    {
+    public void updateMapLocation() {
         //Create a data source and add it to the map.
         DataSource source = new DataSource();
         //Import the geojson data and add it to the data source.
@@ -170,7 +184,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     }
 
     @Override
-    protected void onStart(){
+    protected void onStart() {
         super.onStart();
     }
 
@@ -198,7 +212,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.d ("GStreamer", "Saving state, playing:" + is_playing_desired);
+        Log.d("GStreamer", "Saving state, playing:" + is_playing_desired);
         outState.putBoolean("playing", is_playing_desired);
     }
 
@@ -213,8 +227,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     // Called from native code. Native code calls this once it has created its pipeline and
     // the main loop is running, so it is ready to accept commands.
-    private void onGStreamerInitialized () {
-        Log.i ("GStreamer", "Gst initialized. Restoring state, playing:" + is_playing_desired);
+    private void onGStreamerInitialized() {
+        Log.i("GStreamer", "Gst initialized. Restoring state, playing:" + is_playing_desired);
         // Restore previous playing state
         is_playing_desired = true;
         if (is_playing_desired) {

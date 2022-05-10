@@ -15,10 +15,10 @@
         android:id="@+id/navigation_chat"
         android:icon="@drawable/ic_round_message_24"
         android:title="CHATS" />
-    <item
-        android:id="@+id/navigation_cam"
-        android:icon="@drawable/ic_baseline_photo_camera_24"
-        android:title="CAM" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_cam"-->
+<!--        android:icon="@drawable/ic_baseline_photo_camera_24"-->
+<!--        android:title="CAM" />-->
 
 <!--    <item-->
 <!--        android:id="@+id/navigation_alarm"-->
@@ -30,5 +30,9 @@
         android:id="@+id/navigation_diary"
         android:icon="@drawable/ic_baseline_event_note_24"
         android:title="DIARY" />
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings_24"
+        android:title="@string/settings" />
 
 </menu>

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AIDrive_Concept2.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AIDrive_Concept2.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/callbacks/AIDrive_Concept2.callbacks.iml" filepath="$PROJECT_DIR$/.idea/modules/callbacks/AIDrive_Concept2.callbacks.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mqttClient/AIDrive_Concept2.mqttClient.iml" filepath="$PROJECT_DIR$/.idea/modules/mqttClient/AIDrive_Concept2.mqttClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/network/AIDrive_Concept2.network.iml" filepath="$PROJECT_DIR$/.idea/modules/network/AIDrive_Concept2.network.iml" />
     </modules>
   </component>
 </project>

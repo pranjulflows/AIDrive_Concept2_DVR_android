@@ -45,7 +45,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="8dp"
-        android:layout_marginVertical="@dimen/_10sdp"
         android:background="@drawable/ic_send_24"
         app:layout_constraintBottom_toBottomOf="@+id/messageEt"
         app:layout_constraintEnd_toEndOf="parent"

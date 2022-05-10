@@ -1,4 +1,4 @@
-package com.aidrive.aidriveconcept.ui.task;
+package com.aidrive.aidriveconcept.ui.job;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

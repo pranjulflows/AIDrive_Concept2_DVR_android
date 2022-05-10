@@ -11,8 +11,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.aidrive.aidriveconcept.R;
+import com.aidrive.aidriveconcept.databinding.FragmentDiaryBinding;
+import com.aidrive.aidriveconcept.databinding.SettingsFragmentBinding;
+import com.aidrive.aidriveconcept.ui.diary.DiaryViewModel;
 
 public class SettingsFragment extends Fragment {
 
@@ -22,17 +26,26 @@ public class SettingsFragment extends Fragment {
         return new SettingsFragment();
     }
 
+    private SettingsFragmentBinding binding;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.settings_fragment, container, false);
+        SettingsViewModel camViewModel =
+                new ViewModelProvider(this).get(SettingsViewModel.class);
+
+        binding = SettingsFragmentBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+
+        final TextView textView = binding.textDiary;
+        camViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        return root;
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(SettingsViewModel.class);
-        // TODO: Use the ViewModel
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 
 }

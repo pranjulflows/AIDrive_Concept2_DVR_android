@@ -1,5 +1,10 @@
 package com.aidrive.aidriveconcept.ui.home;
 
+import static com.aidrive.aidriveconcept.Utils.gpsModel;
+import static com.azure.android.maps.control.options.CameraOptions.center;
+import static com.azure.android.maps.control.options.CameraOptions.centerOffset;
+import static com.azure.android.maps.control.options.CameraOptions.zoom;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,8 +20,10 @@ import androidx.lifecycle.ViewModelProvider;
 import com.aidrive.aidriveconcept.MainActivity;
 import com.aidrive.aidriveconcept.R;
 import com.aidrive.aidriveconcept.databinding.FragmentHomeBinding;
+import com.aidrive.aidriveconcept.model.GPSModel;
 import com.azure.android.maps.control.AzureMaps;
 import com.azure.android.maps.control.MapControl;
+import com.azure.android.maps.control.data.Offset;
 import com.azure.android.maps.control.layer.SymbolLayer;
 import com.azure.android.maps.control.source.DataSource;
 import com.mapbox.geojson.Point;
@@ -32,6 +39,8 @@ public class HomeFragment extends Fragment {
         AzureMaps.setSubscriptionKey("joUzYHjb-kg-kko8UqO-l8o9Ayj7rIYsWnooiC1cbKk");
     }
 
+    // 30.7132029
+    // 76.6932075
     MapControl mapControl;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -51,12 +60,13 @@ public class HomeFragment extends Fragment {
             DataSource source = new DataSource();
             map.sources.add(source);
             //Create a point and add it to the data source.
-            source.add(Point.fromLngLat(33.8714, 151.1949));
+            source.add(Point.fromLngLat(gpsModel.getLongitude(),gpsModel.getLatitude()));
             //Create a symbol layer to render icons and/or text at points on the map.
             SymbolLayer layer = new SymbolLayer(source);
             //Add the layer to the map.
             map.layers.add(layer);
-            //map.setCamera(center(Point.fromLngLat(33.8714, 151.1949)), zoom(14));
+            map.setCamera(center(Point.fromLngLat(gpsModel.getLongitude(),gpsModel.getLatitude())), zoom(14));
+            map.setCamera(centerOffset(new Offset(0,-90)));
         });
         activity.onFragmentCreated("mapFragment");
         return root;

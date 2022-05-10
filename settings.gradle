@@ -30,3 +30,4 @@ include ':app'
 include ':mqttClient'
 include ':callbacks'
 
+include ':network'

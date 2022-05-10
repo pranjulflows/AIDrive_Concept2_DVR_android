@@ -7,6 +7,11 @@ import android.view.Window;
 import android.view.WindowManager;
 
 public class LauncherActivity extends AppCompatActivity {
+    static {
+        System.loadLibrary("gstreamer_android");
+        System.loadLibrary("flyover");
+//        nativeClassInit();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -32,7 +32,6 @@ public class MqttManagerImpl implements MqttManager {
         this.clientId = clientId;
         this.topics = topics;
         this.topicQos = topicQos;
-
     }
 
     @Override
@@ -59,7 +58,6 @@ public class MqttManagerImpl implements MqttManager {
             public void messageArrived(String topic, MqttMessage message) throws Exception {
                 mqttStatusListener.onMessageArrived(topic, message);
                 Log.i(TAG, " messageArrived: topic: "+topic+" MqttMessage: "+message.toString());
-
             }
 
             @Override

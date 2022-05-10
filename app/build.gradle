@@ -38,8 +38,16 @@ android {
 
     buildTypes {
         release {
+
+            buildConfigField "String", "API_URL", "\"https://www.google.com/\""
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            //        it will secure base url
+            buildConfigField "String", "API_URL", "\"https://www.google.com/\""
+
         }
     }
     compileOptions {
@@ -70,6 +78,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation(project(path: ':callbacks'))
     implementation(project(path: ':mqttClient'))
+    implementation(project(path: ':network'))
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
@@ -86,5 +95,5 @@ dependencies {
 
 //    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.4'
-//    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
 }

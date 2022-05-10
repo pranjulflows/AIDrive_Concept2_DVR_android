@@ -71,7 +71,6 @@
         android:layout_height="@dimen/_26sdp"
         android:background="@drawable/edittext_border"
         android:text="@string/login"
-        android:textSize="@dimen/_14sdp"
         android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/optionsBtn"
         app:layout_constraintHorizontal_bias="0.5"

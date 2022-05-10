@@ -9,13 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.aidrive.aidriveconcept.R;
 import com.aidrive.aidriveconcept.adapter.ChatsListAdapter;
 import com.aidrive.aidriveconcept.databinding.ChatListFragmentBinding;
+import com.softradix.callbacks.OnChatCallback;
 
-public class ChatsListFragment extends Fragment {
+public class ChatsListFragment extends Fragment implements OnChatCallback {
 
     private ChatsViewModel mViewModel;
 
@@ -44,8 +46,8 @@ public class ChatsListFragment extends Fragment {
 
     private void setRecyclerView() {
 
-     binding.chatsList.setLayoutManager(new LinearLayoutManager(requireActivity(),LinearLayoutManager.VERTICAL,false));
-     binding.chatsList.setAdapter(new ChatsListAdapter());
+        binding.chatsList.setLayoutManager(new LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL, false));
+        binding.chatsList.setAdapter(new ChatsListAdapter(this));
     }
 
     private void showDefaultFragment() {
@@ -59,9 +61,14 @@ public class ChatsListFragment extends Fragment {
         mViewModel = new ViewModelProvider(this).get(ChatsViewModel.class);
         // TODO: Use the ViewModel
     }
-private void initMqttStatusListener(){
 
-}
+    private void initMqttStatusListener() {
+
+    }
 
 
+    @Override
+    public void onSelectUserChat(int position) {
+        Navigation.findNavController(requireActivity(), R.id.chatFragment);
+    }
 }
