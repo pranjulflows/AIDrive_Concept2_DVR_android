@@ -2,6 +2,11 @@ package com.softradix.network;
 
 import android.util.Log;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.softradix.core.AppPreferences;
+import com.softradix.core.Constants;
+
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
@@ -13,12 +18,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    public static String BaseAddress = "" ;
-
+    public static String BaseAddress = "";
 
     public static Retrofit retrofit = null;
 
-    public static Retrofit apiClient() {
+    public static Retrofit apiClient(AppPreferences appPreferences) {
+        BaseAddress = appPreferences.getString(Constants.BASE_URL).equals("") ? Constants.DEFAULT_BASE_URL : appPreferences.getString(Constants.BASE_URL);
+        Log.e("TAG", "apiClient: "+BaseAddress );
         if (retrofit == null) {
             final HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
 
@@ -44,11 +50,15 @@ public class RetrofitClient {
                         return response;
                     })
                     .build();
-
+            Gson gson = new GsonBuilder()
+                    .setLenient()
+                    .create();
             retrofit = new Retrofit.Builder()
                     .baseUrl(BaseAddress)
-                    .addConverterFactory(GsonConverterFactory.create())
+
+                    .addConverterFactory(GsonConverterFactory.create(gson))
                     .client(okHttpClient)
+
                     .build();
 
         }

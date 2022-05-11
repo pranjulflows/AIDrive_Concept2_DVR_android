@@ -1,6 +1,5 @@
 package com.aidrive.aidriveconcept.ui.cam;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.SurfaceView;
@@ -12,7 +11,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import com.aidrive.aidriveconcept.MainActivity;
 import com.aidrive.aidriveconcept.databinding.FragmentCamBinding;
-import java.util.EventListener;
 
 public class CamFragment extends Fragment {
 

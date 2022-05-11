@@ -4,9 +4,25 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AIDrive_Concept2.iml" filepath="$PROJECT_DIR$/.idea/modules/AIDrive_Concept2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AIDrive_Concept2.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AIDrive_Concept2.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AIDrive_Concept2.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AIDrive_Concept2.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AIDrive_Concept2.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AIDrive_Concept2.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AIDrive_Concept2.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AIDrive_Concept2.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/callbacks/AIDrive_Concept2.callbacks.iml" filepath="$PROJECT_DIR$/.idea/modules/callbacks/AIDrive_Concept2.callbacks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/callbacks/AIDrive_Concept2.callbacks.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/callbacks/AIDrive_Concept2.callbacks.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/callbacks/AIDrive_Concept2.callbacks.main.iml" filepath="$PROJECT_DIR$/.idea/modules/callbacks/AIDrive_Concept2.callbacks.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/callbacks/AIDrive_Concept2.callbacks.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/callbacks/AIDrive_Concept2.callbacks.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/AIDrive_Concept2.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/AIDrive_Concept2.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/AIDrive_Concept2.core.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/core/AIDrive_Concept2.core.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/AIDrive_Concept2.core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/AIDrive_Concept2.core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/AIDrive_Concept2.core.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/core/AIDrive_Concept2.core.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mqttClient/AIDrive_Concept2.mqttClient.iml" filepath="$PROJECT_DIR$/.idea/modules/mqttClient/AIDrive_Concept2.mqttClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mqttClient/AIDrive_Concept2.mqttClient.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/mqttClient/AIDrive_Concept2.mqttClient.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mqttClient/AIDrive_Concept2.mqttClient.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mqttClient/AIDrive_Concept2.mqttClient.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mqttClient/AIDrive_Concept2.mqttClient.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/mqttClient/AIDrive_Concept2.mqttClient.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/network/AIDrive_Concept2.network.iml" filepath="$PROJECT_DIR$/.idea/modules/network/AIDrive_Concept2.network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/network/AIDrive_Concept2.network.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/network/AIDrive_Concept2.network.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/network/AIDrive_Concept2.network.main.iml" filepath="$PROJECT_DIR$/.idea/modules/network/AIDrive_Concept2.network.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/network/AIDrive_Concept2.network.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/network/AIDrive_Concept2.network.unitTest.iml" />
     </modules>
   </component>
 </project>

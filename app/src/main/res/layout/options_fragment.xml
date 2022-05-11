@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginTop="@dimen/_20sdp"
     android:layout_gravity="center"
-    tools:context=".OptionsFragment">
+    tools:context=".ui.options.OptionsFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/appCompatImageView" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/userNameEt"
+        android:id="@+id/deviceApiPointEt"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_25sdp"
         android:layout_marginHorizontal="70dp"
@@ -49,25 +49,50 @@
         android:text="@string/cloud_api_endpoint"
         android:textColor="@color/black"
         android:textSize="@dimen/_12sdp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.27"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userNameEt" />
+        app:layout_constraintStart_toStartOf="@+id/cloudApiEt"
+        app:layout_constraintTop_toBottomOf="@+id/deviceApiPointEt" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/passwordEt"
+        android:id="@+id/cloudApiEt"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_25sdp"
         android:textSize="@dimen/_14sdp"
         android:layout_marginHorizontal="70dp"
+        android:paddingHorizontal="@dimen/_3sdp"
         android:background="@drawable/edittext_border"
         android:inputType="textPhonetic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordTextView" />
 
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/serialNumberTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Serial Number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="@+id/serialNumberEt"
+        app:layout_constraintTop_toBottomOf="@+id/cloudApiEt" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/serialNumberEt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginHorizontal="70dp"
+        android:background="@drawable/edittext_border"
+        android:paddingHorizontal="@dimen/_3sdp"
+        android:inputType="textPhonetic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serialNumberTxt" />
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/loginBtn"
+        android:id="@+id/saveBtn"
         android:layout_width="@dimen/_50sdp"
         android:layout_height="@dimen/_24sdp"
         android:layout_marginTop="@dimen/_10sdp"
@@ -75,8 +100,8 @@
         android:text="@string/save"
         android:textAllCaps="false"
         android:textSize="@dimen/_10sdp"
-        app:layout_constraintStart_toStartOf="@+id/passwordEt"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEt" />
+        app:layout_constraintStart_toStartOf="@+id/serialNumberEt"
+        app:layout_constraintTop_toBottomOf="@+id/serialNumberEt" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/backBtn"
@@ -86,9 +111,9 @@
         android:text="@string/back"
         android:textAllCaps="false"
         android:textSize="@dimen/_10sdp"
-        app:layout_constraintBottom_toBottomOf="@+id/loginBtn"
-        app:layout_constraintEnd_toEndOf="@+id/passwordEt"
-        app:layout_constraintTop_toTopOf="@+id/loginBtn" />
+        app:layout_constraintBottom_toBottomOf="@+id/saveBtn"
+        app:layout_constraintEnd_toEndOf="@+id/cloudApiEt"
+        app:layout_constraintTop_toTopOf="@+id/saveBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

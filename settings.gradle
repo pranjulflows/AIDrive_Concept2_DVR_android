@@ -31,3 +31,4 @@ include ':mqttClient'
 include ':callbacks'
 
 include ':network'
+include ':core'

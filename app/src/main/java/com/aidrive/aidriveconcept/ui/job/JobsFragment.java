@@ -1,6 +1,6 @@
 package com.aidrive.aidriveconcept.ui.job;
 
-import static com.aidrive.aidriveconcept.Utils.gpsModel;
+import static com.aidrive.aidriveconcept.utils.Utils.gpsModel;
 import static com.azure.android.maps.control.options.CameraOptions.center;
 import static com.azure.android.maps.control.options.CameraOptions.centerOffset;
 import static com.azure.android.maps.control.options.CameraOptions.zoom;
@@ -49,6 +49,14 @@ public class JobsFragment extends Fragment {
         mapControl = root.findViewById(R.id.mapcontrol);
 
         mapControl.onCreate(savedInstanceState);
+
+
+        return root;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         //Wait until the map resources are ready.
         mapControl.onReady(map -> {
             //Create a data source and add it to the map.
@@ -64,12 +72,6 @@ public class JobsFragment extends Fragment {
             map.setCamera(centerOffset(new Offset(0,-75)));
         });
 
-        return root;
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
     RecyclerView rv = binding.listView.recyclerView;
     rv.addItemDecoration(new DividerItemDecoration(requireActivity(),DividerItemDecoration.HORIZONTAL));
     rv.setLayoutManager(new LinearLayoutManager(requireActivity(),LinearLayoutManager.VERTICAL,false));

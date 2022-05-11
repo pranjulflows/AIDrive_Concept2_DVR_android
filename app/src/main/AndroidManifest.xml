@@ -2,17 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aidrive.aidriveconcept">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".app.AiDriveApp"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.AIDriveConcept2">
         <activity
-            android:name=".LauncherActivity"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
-            android:exported="true" >
+            android:name=".ui.LauncherActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AIDriveConcept2"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -20,8 +26,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="userLandscape"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="userLandscape">
 
         </activity>
 

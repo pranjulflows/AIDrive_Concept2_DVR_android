@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.aidrive.aidriveconcept.GStreamerSurfaceView
+        <com.aidrive.aidriveconcept.utils.GStreamerSurfaceView
             android:id="@+id/surfaceView1"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -33,7 +33,7 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.5" />
 
-        <com.aidrive.aidriveconcept.GStreamerSurfaceView
+        <com.aidrive.aidriveconcept.utils.GStreamerSurfaceView
             android:id="@+id/surfaceView2"
             android:layout_width="0dp"
             android:layout_height="0dp"

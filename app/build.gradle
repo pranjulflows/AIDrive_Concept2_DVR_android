@@ -76,9 +76,12 @@ afterEvaluate {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation(project(path: ':callbacks'))
-    implementation(project(path: ':mqttClient'))
-    implementation(project(path: ':network'))
+
+    implementation(project(':core'))
+    implementation(project(':callbacks'))
+    implementation(project(':mqttClient'))
+    implementation(project(':network'))
+
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'

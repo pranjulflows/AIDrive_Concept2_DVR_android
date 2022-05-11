@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/optionsFragment"
-        android:name="com.aidrive.aidriveconcept.OptionsFragment"
+        android:name="com.aidrive.aidriveconcept.ui.options.OptionsFragment"
         android:label="options_fragment"
         tools:layout="@layout/options_fragment" >
         <action

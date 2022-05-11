@@ -20,12 +20,8 @@ import com.aidrive.aidriveconcept.ui.cam.CamFragment;
 import com.aidrive.aidriveconcept.ui.home.HomeFragment;
 import com.azure.android.maps.control.source.DataSource;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.softradix.network.RetrofitClient;
 
 import org.freedesktop.gstreamer.GStreamer;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback {
     private native String nativeGetGStreamerInfo();
