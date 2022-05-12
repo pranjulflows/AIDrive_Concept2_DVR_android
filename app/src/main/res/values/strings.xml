@@ -25,8 +25,8 @@
     <string name="load_info">Load Info</string>
     <string name="details">Details</string>
     <string name="google_plex_mount_palo">Google Plex, Mount palo</string>
-    <string name="qty_units_qty">Qty/Units: {qty}</string>
-    <string name="measurement_unit_type">Measurement: {unit type}</string>
+    <string name="qty_units_qty">Qty/Units: %s</string>
+    <string name="measurement_unit_type">Measurement: %s</string>
     <string name="pickup_location">Pickup Location:</string>
     <string name="accept_job">Accept Job</string>
     <string name="start_job">Start Job</string>

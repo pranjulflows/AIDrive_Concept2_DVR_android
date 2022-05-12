@@ -16,6 +16,8 @@ android {
     buildTypes {
         release {
             buildConfigField "String", "API_URL", "\"https://www.google.com/\""
+            buildConfigField "String", "AZURE_DIRECTION_URL", "\"https://atlas.microsoft.com/route/directions/json\""
+            buildConfigField "String", "subscription-key", "\"joUzYHjb-kg-kko8UqO-l8o9Ayj7rIYsWnooiC1cbKk\""
 
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -23,6 +25,8 @@ android {
         debug {
             //        it will secure base url
             buildConfigField "String", "API_URL", "\"https://www.google.com/\""
+            buildConfigField "String", "AZURE_DIRECTION_URL", "\"https://atlas.microsoft.com/route/\""
+            buildConfigField "String", "AZURE_KEY", "\"joUzYHjb-kg-kko8UqO-l8o9Ayj7rIYsWnooiC1cbKk\""
 
         }
     }

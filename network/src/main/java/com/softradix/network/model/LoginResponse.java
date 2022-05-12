@@ -4,6 +4,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class LoginResponse {
 
+	@SerializedName("id")
+	private String id;
 	@SerializedName("driver_license_number")
 	private String driverLicenseNumber;
 
@@ -46,6 +48,13 @@ public class LoginResponse {
 	@SerializedName("status")
 	private String status;
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 	public void setDriverLicenseNumber(String driverLicenseNumber){
 		this.driverLicenseNumber = driverLicenseNumber;
 	}

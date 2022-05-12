@@ -19,7 +19,7 @@
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-land/chat_list_fragment.xml" value="0.33" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-land/chats_fragment.xml" value="0.25" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-land/fragment_home.xml" value="0.14" />
-        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-land/fragment_task.xml" value="0.25" />
+        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-land/fragment_task.xml" value="0.2877297990594271" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-land/settings_fragment.xml" value="0.465625" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-sw600dp/fragment_home.xml" value="0.13" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout-sw600dp/login_fragment.xml" value="0.262890625" />
@@ -32,13 +32,13 @@
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/fragment_cam.xml" value="0.17526041666666667" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/fragment_diary.xml" value="0.262890625" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/fragment_home.xml" value="0.12" />
-        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/fragment_task.xml" value="0.262890625" />
+        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/fragment_task.xml" value="0.22" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/header_view.xml" value="0.19236111111111112" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/header_view_layout.xml" value="0.262890625" />
-        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/job_left_layout.xml" value="0.18" />
+        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/job_left_layout.xml" value="0.2877297990594271" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/job_right_layout.xml" value="0.22" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/left_chat_layout.xml" value="0.262890625" />
-        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/list_item.xml" value="0.19236111111111112" />
+        <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/list_item.xml" value="0.25" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/login_fragment.xml" value="0.25" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/options_fragment.xml" value="0.262890625" />
         <entry key="..\:/Users/Prateek/StudioProjects/DVR-UI-Test/app/src/main/res/layout/right_chat_layout.xml" value="0.262890625" />

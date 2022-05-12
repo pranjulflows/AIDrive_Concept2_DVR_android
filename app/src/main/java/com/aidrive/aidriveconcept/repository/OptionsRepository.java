@@ -31,17 +31,16 @@ public class OptionsRepository {
 
     public MutableLiveData<LoginResponse> login(HashMap<String, String> request, String serialNo, Activity activity) {
         final MutableLiveData<LoginResponse> mutableLiveData = new MutableLiveData<>();
-        service.login(request, serialNo).enqueue(new Callback<ResponseBody>() {
+        service.login(request, serialNo).enqueue(new Callback<LoginResponse>() {
             @Override
-            public void onResponse(@NonNull Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {
+            public void onResponse(@NonNull Call<LoginResponse> call, @NonNull Response<LoginResponse> response) {
                 if (response.code() == 500) {
                     ViewUtils.showToast(AiDriveApp.context(), "Something went wrong please check your setting in options");
                 }
                 if (response.isSuccessful() && response.body() != null) {
-                    AiDriveApp.getAppPreferences().putString(Constants.USER_DATA, new Gson().toJson(response.body()));
 
                     try {
-                        if (response.body().string().equals("no auth")) {
+                        if (response.body() == null) {
                             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(activity)/*.Builder(activity, android.R.style.Theme_Material_Dialog_Alert)*/;
                             builder.setTitle("Alert!");
                             builder.setCancelable(false);
@@ -55,12 +54,13 @@ public class OptionsRepository {
                             builder.show();
                         } else {
                             flag = 0;
-                            LoginResponse loginResponse = new Gson().fromJson(response.body().string(), LoginResponse.class);
-                            mutableLiveData.setValue(loginResponse);
+//                            LoginResponse loginResponse = new Gson().fromJson(response.body(), LoginResponse.class);
+                            mutableLiveData.setValue(response.body());
+                            AiDriveApp.getAppPreferences().putString(Constants.USER_DATA, new Gson().toJson(response.body()));
 
                         }
-                        Log.e(TAG, "onResponse: " + response.body().string());
-                    } catch (IOException e) {
+                        Log.e(TAG, "onResponse: " + new Gson().toJson(response.body()));
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
 
@@ -68,7 +68,7 @@ public class OptionsRepository {
             }
 
             @Override
-            public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
+            public void onFailure(@NonNull Call<LoginResponse> call, @NonNull Throwable t) {
                 Log.e(TAG, " onFailure" + call);
                 Log.e(TAG, " onFailure" + t);
 

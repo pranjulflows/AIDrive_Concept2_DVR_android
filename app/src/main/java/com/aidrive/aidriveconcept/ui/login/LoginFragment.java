@@ -69,6 +69,11 @@ public class LoginFragment extends Fragment {
                 request.put("id", "0");
                 request.put("username", binding.userNameEt.getText().toString());
                 request.put("password", binding.passwordEt.getText().toString());
+                String userLogin = new Gson().toJson(request);
+                Log.e("TAG", "onClickEvents: "+userLogin );
+
+                AiDriveApp.getAppPreferences().putString(Constants.USER_LOGIN,userLogin);
+
                 login(request);
             }
         });
