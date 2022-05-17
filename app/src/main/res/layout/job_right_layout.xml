@@ -4,221 +4,240 @@
     android:layout_width="match_parent"
     android:id="@+id/jobDescLayout"
     android:visibility="visible"
+    android:animateLayoutChanges="true"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="10dp">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/jobView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="@id/centerGuide"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/job_info"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_9sdp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/black" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/jobNameTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/job_name"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_6sdp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/jobDescTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/job_description"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_6sdp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/jobStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/job_status"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_6sdp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/jobStartDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/start_date"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_6sdp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/jobEndDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/end_date"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_6sdp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/jobPriority"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/job_priority"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_6sdp" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/loadView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/centerGuide"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/load_info"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_9sdp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/black" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/details"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_6sdp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/google_plex_mount_palo"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_6sdp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/units"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/qty_units_qty"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_6sdp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/measurement"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/measurement_unit_type"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_6sdp" />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/locationInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_2sdp"
-        android:text="@string/location_info"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_9sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/jobView" />
-
-    <View
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/jobDescriptionView"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/locationInfo" />
-
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/pickupLocationView"
-        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@+id/centerGuide"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/locationInfo">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/pickup_location"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_7sdp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/pickupLocationTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/google_plex_mount_palo"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_6sdp" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
+        android:animateLayoutChanges="true"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/centerGuide"
-        app:layout_constraintTop_toBottomOf="@id/locationInfo">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/jobView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@id/centerGuide"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/job_info"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/jobNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/job_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/jobDescTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/job_description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/jobStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/job_status"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/jobStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/start_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/jobEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/end_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/jobPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/job_priority"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6sdp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/loadView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/centerGuide"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/load_info"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/details"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/google_plex_mount_palo"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/units"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/qty_units_qty"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/measurement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/measurement_unit_type"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6sdp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/locationInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_2sdp"
-            android:text="@string/delivery_location"
+            android:text="@string/location_info"
             android:textColor="@color/black"
-            android:textSize="@dimen/_7sdp" />
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/jobView" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/deliveryLocationTxt"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/locationInfo" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/pickupLocationView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/centerGuide"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationInfo">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/pickup_location"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_7sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pickupLocationTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/google_plex_mount_palo"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6sdp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/centerGuide"
+            app:layout_constraintTop_toBottomOf="@id/locationInfo">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/delivery_location"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_7sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/deliveryLocationTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:text="@string/google_plex_mount_palo"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_6sdp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerGuide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_2sdp"
-            android:text="@string/google_plex_mount_palo"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_6sdp" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.azure.android.maps.control.MapControl
         android:id="@+id/mapcontrol"
@@ -229,7 +248,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pickupLocationView"
+        app:layout_constraintTop_toBottomOf="@id/jobDescriptionView"
         app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -270,10 +289,4 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/startJobBtn" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/centerGuide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent=".5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

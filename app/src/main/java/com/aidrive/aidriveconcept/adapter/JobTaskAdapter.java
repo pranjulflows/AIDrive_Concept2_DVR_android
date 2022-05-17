@@ -21,7 +21,7 @@ public class JobTaskAdapter extends RecyclerView.Adapter<JobTaskAdapter.ViewHold
     List<JobResponse> items = new ArrayList<>();
     //    ArrayList<String> items = new ArrayList<>();
     OnJobJobListener listener;
-
+    OnPreSelected onSelected;
     public JobTaskAdapter(List<JobResponse> items, OnJobJobListener listener) {
         this.listener = listener;
         this.items = items;
@@ -34,6 +34,10 @@ public class JobTaskAdapter extends RecyclerView.Adapter<JobTaskAdapter.ViewHold
         void onJobSelected(JobResponse data);
     }
 
+    public interface OnPreSelected {
+        void onSelected(boolean selected);
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -44,21 +48,26 @@ public class JobTaskAdapter extends RecyclerView.Adapter<JobTaskAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
         holder.onBind(items.get(position));
+
         holder.binding.listItem.setOnClickListener(view -> {
             row_index = position;
             notifyDataSetChanged();
             listener.onJobSelected(items.get(position));
         });
-        if(row_index==position){
+
+        if (row_index == position) {
             holder.binding.getRoot().setBackgroundColor(Color.parseColor("#CCCCCC"));
-        }
-        else
-        {
+        } else {
             holder.binding.getRoot().setBackgroundColor(Color.parseColor("#ffffff"));
-
         }
 
+
+        if(position==0 && row_index==-1){
+            holder.binding.getRoot().setBackgroundColor(Color.parseColor("#CCCCCC"));
+            listener.onJobSelected(items.get(position));
+        }
     }
 
 

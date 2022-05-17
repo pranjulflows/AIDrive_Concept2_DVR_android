@@ -30,5 +30,6 @@ public interface ApiService {
 
 
     @GET("directions/json")
-    Call<RoutePointsResponse> getRoutes(@Query("subscription-key")String apiKey, @Query("query")String query);
+    Call<RoutePointsResponse> getRoutes(@Query("subscription-key")String apiKey, @Query("query")String query,
+                                        @Query("travelMode")String travelMode, @Query("maxAlternatives")String maxAlternatives);
 }

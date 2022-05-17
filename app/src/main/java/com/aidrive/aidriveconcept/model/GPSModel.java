@@ -1,5 +1,7 @@
 package com.aidrive.aidriveconcept.model;
 
+import androidx.annotation.NonNull;
+
 public class GPSModel {
     double latitude;
     double longitude;
@@ -25,4 +27,9 @@ public class GPSModel {
         this.longitude = longitude;
     }
 
+    @NonNull
+    @Override
+    public String toString() {
+        return "Latitude: -" + getLatitude() + "\nLongitude: -" + getLongitude();
+    }
 }

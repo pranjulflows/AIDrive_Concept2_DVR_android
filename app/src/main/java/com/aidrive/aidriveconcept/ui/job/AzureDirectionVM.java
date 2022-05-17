@@ -13,6 +13,7 @@ import com.aidrive.aidriveconcept.repository.JobRepository;
 import com.google.gson.Gson;
 import com.softradix.core.Constants;
 import com.softradix.core.ViewUtils;
+import com.softradix.network.mapModel.TravelRoutesModel;
 import com.softradix.network.model.JobResponse;
 import com.softradix.network.model.RoutePointsResponse;
 import com.softradix.network.request.LoginRequest;
@@ -41,4 +42,5 @@ public class AzureDirectionVM extends ViewModel {
         }
         return mutableLiveData;
     }
+
 }

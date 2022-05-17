@@ -22,7 +22,7 @@ public class DirectionRoutesRepository {
 
     public MutableLiveData<RoutePointsResponse> getRoutes(String pickupLocation, String deliveryLocation) {
         final MutableLiveData<RoutePointsResponse> mutableLiveData = new MutableLiveData<>();
-        service.getRoutes(BuildConfig.AZURE_KEY, pickupLocation.concat(":").concat(deliveryLocation)).enqueue(new Callback<RoutePointsResponse>() {
+        service.getRoutes(BuildConfig.AZURE_KEY, pickupLocation.concat(":").concat(deliveryLocation),"car","2").enqueue(new Callback<RoutePointsResponse>() {
             @Override
             public void onResponse(@NonNull Call<RoutePointsResponse> call, @NonNull Response<RoutePointsResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
